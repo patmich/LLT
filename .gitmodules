@@ -1,0 +1,12 @@
+[submodule "Assets/Library/LLT/Core"]
+	path = Assets/Library/LLT/Core
+	url = https://patmich@github.com/patmich/Core.git
+[submodule "Assets/Library/LLT/TS"]
+	path = Assets/Library/LLT/TS
+	url = https://patmich@github.com/patmich/TS.git
+[submodule "Assets/Library/LLT/EM"]
+	path = Assets/Library/LLT/EM
+	url = https://patmich@github.com/patmich/EM.git
+[submodule "Assets/Library/DotNetZip"]
+	path = Assets/Library/DotNetZip
+	url = https://patmich@github.com/patmich/dotnetzip.git
