@@ -1,0 +1,132 @@
+<languageVersion : 1.0;>
+
+kernel GlowPicker
+<
+    namespace: "RestoCity";
+    vendor: "EA";
+    version: 1;
+    description: "A shader that does nothing, but does it well.";
+>
+{
+    input image4 src;
+    input image4 glow;
+    output pixel4 dst;
+    
+    
+    void evaluatePixel()
+    {
+        float4 acc = pixel4(0,0,0,0);
+        float cnt = 0.0;
+       
+        pixel4 current = sampleNearest(glow, outCoord() + float2(0,0));
+        if(current.a > 0.0)
+        {
+			pixel4 left = sampleNearest(src, outCoord() + float2(-1,0));
+            pixel4 right = sampleNearest(src, outCoord() + float2(0,1));
+			pixel4 up = sampleNearest(src, outCoord() + float2(0,-1));
+			pixel4 down = sampleNearest(src, outCoord() + float2(1,0));
+			pixel4 upperLeft = sampleNearest(src, outCoord() + float2(-1,-1));
+			pixel4 upperRight = sampleNearest(src, outCoord() + float2(1,-1));
+			pixel4 lowerRight = sampleNearest(src, outCoord() + float2(1,1));
+			pixel4 lowerLeft = sampleNearest(src, outCoord() + float2(-1,1));
+            
+			float maxAlpha = 0.0;
+			if(left.a > maxAlpha)
+			{
+				maxAlpha = left.a;
+				acc = left;
+				cnt = 1.0;
+			}
+			if(right.a > maxAlpha)
+			{
+				maxAlpha = right.a;
+				acc = right;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && right.a == maxAlpha)
+			{
+				acc += right;
+				cnt++;
+			}
+			if(up.a > maxAlpha)
+			{
+				maxAlpha = up.a;
+				acc = up;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && up.a == maxAlpha)
+			{
+				acc += up;
+				cnt++;
+			}
+			if(down.a > maxAlpha)
+			{
+				maxAlpha = down.a;
+				acc = down;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && down.a == maxAlpha)
+			{
+				acc += down;
+				cnt++;
+			}
+			if(upperLeft.a > maxAlpha)
+			{
+				maxAlpha = upperLeft.a;
+				acc = upperLeft;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && upperLeft.a == maxAlpha)
+			{
+				acc += upperLeft;
+				cnt++;
+			}
+			if(upperRight.a > maxAlpha)
+			{
+				maxAlpha = upperRight.a;
+				acc = upperRight;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && upperRight.a == maxAlpha)
+			{
+				acc += upperRight;
+				cnt++;
+			}
+			if(lowerRight.a > maxAlpha)
+			{
+				maxAlpha = lowerRight.a;
+				acc = lowerRight;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && lowerRight.a == maxAlpha)
+			{
+				acc += lowerRight;
+				cnt++;
+			}
+			if(lowerLeft.a > maxAlpha)
+			{
+				maxAlpha = lowerLeft.a;
+				acc = lowerLeft;
+				cnt = 1.0;
+			}
+			else if(maxAlpha != 0.0 && lowerLeft.a == maxAlpha)
+			{
+				acc += lowerLeft;
+				cnt++;
+			}
+            if(cnt != 0.0)
+            {
+                dst = acc/cnt;
+                dst.a = 1.0;
+            }
+            else
+            {
+                dst = pixel4(1,1,1,0);
+            }
+        }
+        else
+        {
+             dst = pixel4(1,1,1,0);
+        }
+    }
+}
