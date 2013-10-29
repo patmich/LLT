@@ -1,0 +1,92 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LLT/EM/Editor/EMSettings.cs">
+    <Files>
+      <File FileName="Assets/LLT/TS/Runtime/TSTreeStream.cs" Line="97" Column="21" />
+      <File FileName="Assets/LLT/EM/Runtime/EMDisplayTreeStream.cs" Line="16" Column="5" />
+      <File FileName="Assets/LLT/EM/Runtime/EMAnimationTreeStream.cs" Line="11" Column="57" />
+      <File FileName="Assets/LLT/EM/Editor/EMPostprocessor.cs" Line="29" Column="35" />
+      <File FileName="Assets/LLT/EM/Editor/EMSwfBinaryReader.cs" Line="22" Column="10" />
+      <File FileName="Assets/LLT/EM/Editor/EMSwfBinaryWriter.cs" Line="15" Column="6" />
+      <File FileName="Assets/LLT/EM/Editor/EMSwfMemoryStream.cs" Line="7" Column="21" />
+      <File FileName="Assets/LLT/EM/Editor/EMSwfImporter.cs" Line="98" Column="1" />
+      <File FileName="Assets/LLT/EM/Editor/EMSettings.cs" Line="33" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="LLT" expanded="True">
+                <Node name="EM" expanded="True">
+                  <Node name="Runtime" expanded="True" />
+                </Node>
+                <Node name="TS" expanded="True">
+                  <Node name="Runtime" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="Assembly-CSharp-Editor" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="LLT" expanded="True">
+                <Node name="EM" expanded="True">
+                  <Node name="Editor" expanded="True">
+                    <Node name="Base" expanded="True" />
+                    <Node name="Expanded" expanded="True">
+                      <Node name="Base" expanded="True" />
+                    </Node>
+                    <Node name="SwfTag" expanded="True">
+                      <Node name="Base" expanded="True" />
+                      <Node name="ControlTag" expanded="True" />
+                    </Node>
+                    <Node name="EMSettings.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>childs[0]</Value>
+          <Value>this._name</Value>
+          <Value>masked[0]</Value>
+          <Value>mask[0]</Value>
+          <Value>writer.BaseStream.Position</Value>
+          <Value>positions[0]</Value>
+          <Value>positions[1]</Value>
+          <Value>positions[2]</Value>
+          <Value>positions[3]</Value>
+          <Value>positions[4]</Value>
+          <Value>positions[5]</Value>
+          <Value>positions[6]</Value>
+          <Value>positions[7]</Value>
+          <Value>(BBBBAnimationKeyframeStructLayout*)keyframe</Value>
+          <Value>_keyframes[0]</Value>
+          <Value>keyframeValue.ChildIndex]</Value>
+          <Value>tag.EntrySizeOf</Value>
+          <Value>keyframeValue.Offset</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../mixels/Assets/HFSM/HFSMState.cs" line="331" offsetX="129" offsetY="3120" expression="ActionsInternal" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="97" offsetX="158" offsetY="1440" expression="_shape" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="117" offsetX="180" offsetY="1740" expression="Transform" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="35" offsetX="878" offsetY="510" expression="_streamableTree" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="341" offsetX="669" offsetY="5100" expression="_vertices" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="341" offsetX="669" offsetY="5100" expression="_vertices" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="341" offsetX="669" offsetY="5100" expression="_vertices" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/Code/Runtime/EMRoot.cs" line="341" offsetX="669" offsetY="5100" expression="_vertices" liveUpdate="False" />
+    <Watch file="../TestProject/Assets/TS/TSTreeStream.cs" line="156" offsetX="180" offsetY="2325" expression="current" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
