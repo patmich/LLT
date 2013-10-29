@@ -44,26 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Library\DotNetZip\Editor\CommonSrc\CRC32.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\CommonSrc\Iso8859Dash1Encoding.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\Deflate.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\DeflateStream.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\GZipStream.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\InfTree.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\Inflate.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ParallelDeflateOutputStream.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ZTree.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\Zlib.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ZlibBaseStream.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ZlibCodec.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ZlibConstants.cs" />
-     <Compile Include="Assets\Library\DotNetZip\Editor\Zlib\ZlibStream.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfColorTransform.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfMatrix.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfRect.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfTag.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfTransform.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMPostprocessor.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMSettings.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfBinaryReader.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfBinaryWriter.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfFileReader.cs" />
@@ -91,15 +78,13 @@
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\EMSwfSymbolClass.cs" />
      <Compile Include="Assets\Library\LLT\TS\Editor\TSLayoutTool.cs" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\Readme.txt" />
+     <None Include="Assets\Library\LLT\EM\EMSettings.xml" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\Zlib\LICENSE.jzlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\Zlib\License.zlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.BZip2.txt" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilDecrement.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilFullClearZero.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.zlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.txt" />
+ <Reference Include="Assets\Library\DotNetZip\Editor\Ionic.Zip">
+ <HintPath>Assets\Library\DotNetZip\Editor\Ionic.Zip.dll</HintPath>
+ </Reference>
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>

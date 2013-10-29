@@ -87,6 +87,7 @@
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSObject.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSTreeNode.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSTreeStream.cs" />
+     <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITreeStreamQuery.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSFactory.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSLayoutAttribute.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSObject.cs" />
@@ -96,16 +97,12 @@
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamEntry.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamSiblingEnumerator.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamTag.cs" />
+     <Compile Include="Assets\Test.cs" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\Readme.txt" />
+     <None Include="Assets\Library\LLT\EM\EMSettings.xml" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\Zlib\LICENSE.jzlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\Zlib\License.zlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.BZip2.txt" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilDecrement.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilFullClearZero.shader" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.zlib.txt" />
-     <None Include="Assets\Library\DotNetZip\Editor\License.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
