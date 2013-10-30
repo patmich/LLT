@@ -34,7 +34,7 @@ package
 	 * ...
 	 * @author 
 	 */
-	public class Main extends Sprite 
+	public class Main 
 	{
 		private var _input:String;
 		private var _output:String;
@@ -47,19 +47,24 @@ package
 			
 		public function Main():void 
 		{
-			NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE, onInvokeEvent);
+			
 		}
 		public function onInvokeEvent(invocation:InvokeEvent):void 
 		{
 			var loader:Loader = new Loader();
 			if (invocation.arguments.length != 5)
+			{
 				NativeApplication.nativeApplication.exit();
+				return;
+			}
 
 			_input = invocation.arguments[0];
 			_output = invocation.arguments[1];
 			_dpi = invocation.arguments[2];
 			_padding = invocation.arguments[3];
 			_passCount = invocation.arguments[4];
+			
+			trace(_input + " " + _output + " " + _dpi + " " + _padding + " " + _passCount);
 			
 			loader.load(new URLRequest(_input));
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaded);
@@ -69,8 +74,6 @@ package
 			var loaderInfo:LoaderInfo = (e.target as LoaderInfo);
 			loaderInfo.loader.removeEventListener(Event.COMPLETE, loaded);
 			var stage:MovieClip = loaderInfo.content as MovieClip;
-			stage.removeChildAt(stage.numChildren - 1);
-			
 			for (var i:int = 1; i <= stage.totalFrames; i++)
 			{
 				stage.gotoAndStop(i);

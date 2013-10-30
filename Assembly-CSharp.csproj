@@ -59,6 +59,7 @@
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMComponent.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMDisplayTreeStream.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMFactory.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMMonoBehaviour.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMObject.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMRect.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMRoot.cs" />
