@@ -5,20 +5,21 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{7A7D0DB2-74E6-F996-8617-E6178D4C876F}</ProjectGuid>
+	<ProjectGuid>{465E2976-8D8C-DD7B-2828-E3C4F268B56E}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	<DebugSymbols>true</DebugSymbols>
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_2;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_1;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -36,6 +37,7 @@
 	<Reference Include="System" />
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
 	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
@@ -49,14 +51,20 @@
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfRect.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfTag.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Base\EMSwfTransform.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMADLInvoke.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMAnimationHeadInspector.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMFontImporter.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMLayoutTool.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMPostprocessor.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSettings.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfBinaryReader.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfBinaryWriter.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfComponents.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfFileReader.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfHeader.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfImporter.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfMemoryStream.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\EMSwfSettings.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\Base\EMSwfAnimationCurve.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\Base\EMSwfCurveKey.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\EMSwfAnimation.cs" />
@@ -65,6 +73,7 @@
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\EMSwfAnimationKeyframeValueNode.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\EMSwfDefineShapeNode.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\EMSwfDefineSpriteNode.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\Expanded\EMSwfTextNode.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\Base\EMSwfObject.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\Base\EMSwfUnhandledObject.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\ControlTag\EMSwfPlaceObject.cs" />
@@ -76,11 +85,12 @@
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\EMSwfFrameLabel.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\EMSwfShowFrame.cs" />
      <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\EMSwfSymbolClass.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Editor\SwfTag\EMSwfText.cs" />
      <Compile Include="Assets\Library\LLT\TS\Editor\TSLayoutTool.cs" />
-     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
      <None Include="Assets\Library\LLT\EM\EMSettings.xml" />
-     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilDecrement.shader" />
+     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
+     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilFullClearZero.shader" />
  <Reference Include="Assets\Library\DotNetZip\Editor\Ionic.Zip">
  <HintPath>Assets\Library\DotNetZip\Editor\Ionic.Zip.dll</HintPath>
@@ -100,7 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{93ADD930-5CC4-AA40-1E9E-2270572E0F06}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{B5D0D671-97DB-A6A9-89EE-F6742EB583AC}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EMFontId>
+    <FontId>FontTest</FontId>
+    <CharSet>32,33-57,65-90</CharSet>
+    <FontName>Arial Black</FontName>
+    <Color>0xFF000000</Color>
+    <RasterSize>32</RasterSize>
+    <Filters>
+        <Filter>
+            <Name>GlowFilter</Name>
+            <blurX>4</blurX>
+            <blurY>4</blurY>
+            <strength>100</strength>
+            <color>0xFFFF0000</color>
+            <quality>15</quality>
+        </Filter>
+    </Filters>
+</EMFontId>
+

@@ -1,0 +1,41 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Library" expanded="True">
+              <Node name="LLT" expanded="True">
+                <Node name="EM" expanded="True">
+                  <Node name="Runtime" expanded="True">
+                    <Node name="EMFontManager.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>Chars[i]</Value>
+          <Value>charInfo</Value>
+          <Value>_fonts[0]</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/patricemichaud/LLT6/Assets/Library/LLT/EM/Editor/EMSwfImporter.cs" line="90" />
+      <Breakpoint file="/Users/patricemichaud/LLT6/Assets/Library/LLT/EM/Editor/SwfTag/EMSwfDefineSprite.cs" line="239" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../mixels/Assets/HFSM/HFSMState.cs" line="331" offsetX="129" offsetY="3120" expression="ActionsInternal" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

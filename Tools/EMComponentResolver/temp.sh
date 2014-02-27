@@ -1,0 +1,2 @@
+/Applications/Adobe\ Flash\ CC/AIR3.6/bin/adl /Users/patricemichaud/LLT6/Tools/EMComponentResolver/Bin/EMComponentResolver-app.xml -- file://Users/patricemichaud/LLT6/Assets/Data/ui.swf /Users/patricemichaud/LLT6/Temp/
+file://Users/patricemichaud/LLT6/Assets/Data/ui.swf

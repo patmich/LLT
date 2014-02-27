@@ -5,20 +5,21 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{93ADD930-5CC4-AA40-1E9E-2270572E0F06}</ProjectGuid>
+	<ProjectGuid>{B5D0D671-97DB-A6A9-89EE-F6742EB583AC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	<DebugSymbols>true</DebugSymbols>
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_2;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_1;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -36,6 +37,7 @@
 	<Reference Include="System" />
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
 	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
@@ -48,24 +50,37 @@
      <Compile Include="Assets\Library\LLT\Core\Runtime\CoreDictionary.cs" />
      <Compile Include="Assets\Library\LLT\Core\Runtime\CoreMath.cs" />
      <Compile Include="Assets\Library\LLT\Core\Runtime\CoreRect.cs" />
+     <Compile Include="Assets\Library\LLT\Core\Runtime\CoreTask.cs" />
      <Compile Include="Assets\Library\LLT\Core\Runtime\CoreTexture2D.cs" />
      <Compile Include="Assets\Library\LLT\Core\Runtime\Interfaces\ICoreStreamable.cs" />
+     <Compile Include="Assets\Library\LLT\Core\Runtime\Interfaces\ICoreTimeline.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimation.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationClip.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationHead.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationHeadData.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationKeyframe.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationKeyframeValue.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMAnimationTreeStream.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMComponent.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMCustomTransformUpdater.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMDisplayTreeStream.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMDisplayTreeStreamDFSEnumerator.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMExtraDependencies.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMFactory.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMFont.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMFontDefinition.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMFontManager.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMMonoBehaviour.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMObject.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMRect.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMResource.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMRoot.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMShape.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMSprite.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMText.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\EMTransform.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMTreeStreamDFSEnumerator.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\EMUpdateFlag.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMAnimation.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMAnimationClip.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMAnimationClipStructLayout.cs" />
@@ -80,6 +95,8 @@
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMShapeStructLayout.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMSprite.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMSpriteStructLayout.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMText.cs" />
+     <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMTextStructLayout.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMTransform.cs" />
      <Compile Include="Assets\Library\LLT\EM\Runtime\Generated\EMTransformStructLayout.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Generated\TSTreeStreamTag.cs" />
@@ -88,6 +105,7 @@
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSObject.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSTreeNode.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSTreeStream.cs" />
+     <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITSTreeStreamDFSEnumerator.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\Interfaces\ITreeStreamQuery.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSFactory.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSLayoutAttribute.cs" />
@@ -98,11 +116,10 @@
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamEntry.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamSiblingEnumerator.cs" />
      <Compile Include="Assets\Library\LLT\TS\Runtime\TSTreeStreamTag.cs" />
-     <Compile Include="Assets\Test.cs" />
-     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
      <None Include="Assets\Library\LLT\EM\EMSettings.xml" />
-     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilDecrement.shader" />
+     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\Transparent.shader" />
+     <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilIncrement.shader" />
      <None Include="Assets\Library\LLT\EM\Runtime\Shaders\StencilFullClearZero.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
